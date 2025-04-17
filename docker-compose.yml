@@ -8,8 +8,9 @@ services:
       - "8031:9000"
       - "24567:24678"
     volumes:
-      - ./:/src
-      - node_modules:/src/node_modules
+#      - ./:/src
+      - ./:/app
+#      - node_modules:/src/node_modules
     networks:
       - wc-map-net
 

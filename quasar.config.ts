@@ -87,9 +87,13 @@ export default defineConfig((/* ctx */) => {
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-file#devserver
     devServer: {
       server: {
-        type: 'http'
+        type: 'http',
       },
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
+      client: {
+        // webSocketURL: 'auto://0.0.0.0:0/ws',
+        webSocketURL: 'auto://localhost:8031/ws',
+      }
     },
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-file#framework

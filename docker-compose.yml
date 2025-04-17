@@ -1,0 +1,20 @@
+services:
+  node:
+    container_name: wc-map-dev-node
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "8031:9000"
+      - "24567:24678"
+    volumes:
+      - ./:/src
+      - node_modules:/src/node_modules
+    networks:
+      - wc-map-net
+
+volumes:
+  node_modules:
+
+networks:
+  wc-map-net:

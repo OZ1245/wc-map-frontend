@@ -19,3 +19,4 @@ volumes:
 
 networks:
   wc-map-net:
+    external: true
